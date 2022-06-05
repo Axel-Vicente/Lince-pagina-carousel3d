@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>El lince ibérico</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Lince.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/Lince.js" id="rendered-js"></script>
+</head>
+<body translate="no" onload="preloadChargeDefaultImg()">
+    <header class="header-fixed">
+        <div class="header-limiter">
+            <h1><a href="#">Lince<span>Ibérico</span></a></h1>
+            <nav>
+                <a href="#" class="selected" onclick="rotateAndSelect(0)">Alimentación</a>
+                <a href="#" onclick="rotateAndSelect(45)">Reproducción</a>
+                <a href="#" onclick="rotateAndSelect(90)">Beneficios</a>
+                <a href="#" onclick="rotateAndSelect(135)">Hábitat y territorio</a>
+                <a href="#" onclick="rotateAndSelect(180)">La cría</a>
+                <a href="#" onclick="rotateAndSelect(225)">Recuperación</a>
+                <a href="#" onclick="rotateAndSelect(270)">Amenazas</a>
+                <a href="#" onclick="rotateAndSelect(315)">Comportamiento</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="carousel">
+        <figure id="spinner">
+            <img src="img/lice2.jpg" class="spinnerImg" alt>
+            <img src="img/lice4.jpg" class="spinnerImg" alt>
+            <img src="img/lice3.jpg" class="spinnerImg" alt>
+            <img src="img/lice1.jpg" class="spinnerImg" alt>
+            <img src="img/lice5.jpg" class="spinnerImg" alt>
+            <img src="img/lice7.jpg" class="spinnerImg" alt>
+            <img src="img/lice6.jpg" class="spinnerImg" alt>
+            <img src="img/lice8.jpg" class="spinnerImg" alt>
+        </figure>
+    </div>
+    <span style="float:left" class="fa fa-angle-double-left" onclick="galleryspin('-', 'no', 0)"></span>
+    <span style="float:right" class="fa fa-angle-double-right" onclick="galleryspin('', 'no', 0)"></span>
+    <div id="info" align="center"></div>
+</body>
+</html>

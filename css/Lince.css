@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+ *, *::before, *::after {
+    box-sizing: border-box;
+}
+ body {
+	 padding: 2rem 0.5rem;
+	 font-family: 'Raleway', Sans-serif;
+	 color: #32325d;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+	 text-rendering: optimizeLegibility;
+	 margin: 0;
+}
+ @media (min-width: 40rem) {
+	 body {
+		 padding: 2rem;
+	}
+}
+ .container {
+	 display: flex;
+	 -webkit-display: box;
+	 -moz-display: box;
+	 -ms-display: flexbox;
+	 -webkit-display: flex;
+	 flex-wrap: wrap;
+	 padding: 0;
+	 margin: 0;
+}
+ .cards {
+	 display: flex;
+	 padding: 1rem;
+	 margin-bottom: 2rem;
+	 width: 100%;
+}
+ @media (min-width: 40rem) {
+	 .cards {
+		 width: 50%;
+	}
+}
+ @media (min-width: 56rem) {
+	 .cards {
+		 width: 33.3%;
+	}
+}
+ .cards .card-item {
+	 display: flex;
+	 flex-direction: column;
+	 background-color: #fff;
+	 width: 100%;
+	 border-radius: 6px;
+	 box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+	 overflow: hidden;
+	 transition: transform 0.5s;
+	 -webkit-transition: transform 0.5s;
+}
+ .cards .card-item:hover {
+	 cursor: pointer;
+	 transform: scale(1.1);
+	 -webkit-transform: scale(1.1);
+}
+ .cards .card-item:hover .card-image {
+	 opacity: 1;
+}
+ .cards .card-info {
+	 display: flex;
+	 flex: 1 1 auto;
+	 flex-direction: column;
+	 padding: 1rem;
+	 line-height: 1.5em;
+}
+ .cards .card-title {
+	 font-size: 25px;
+	 line-height: 1.1em;
+	 color: #32325d;
+	 margin-bottom: 0.2em;
+}
+ .cards .card-image {
+	 height: 200px;
+	 overflow: hidden;
+	 background-size: cover;
+	 background-position: center;
+	 background-repeat: no-repeat;
+	 border-radius: 6px 6px 0px 0px;
+	 opacity: 0.91;
+}
+
+.card-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div#carousel {
+    perspective: 1200px;
+    background: #60645F;
+    padding-top: 10%;
+    font-size:0;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    border-radius: 0px 0px 6px 6px;
+}
+figure#spinner { 
+    transform-style: preserve-3d;
+    height: 300px;
+    transform-origin: 50% 50% -500px;
+    transition: 1s;
+} 
+figure#spinner img { 
+    width: 40%; max-width: 425px;
+    position: absolute; left: 30%;
+    transform-origin: 50% 50% -500px;
+    outline:1px solid transparent;
+}
+figure#spinner img:nth-child(1) {
+    transform:rotateY(0deg);
+}
+figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+
+div#carousel ~ span { 
+    color: #fff;
+    margin: 5%;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: 0.6s color;
+    position: relative;
+    margin-top: -6rem;
+    border-bottom: none;
+    line-height: 0;
+}
+.header-fixed {
+	background-color:#292c2f;
+	box-shadow:0 1px 1px #ccc;
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+	box-sizing: border-box;
+	top:-100px;
+
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float: left;
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+	color: #6EFF33;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #6EFF33;
+	pointer-events: none;
+	opacity: 1;
+}
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+@media all and (max-width: 600px) {
+
+.header-fixed {
+    padding: 20px 0;
+    height: 75px;
+}
+
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+
+.header-fixed {
+		display: none;
+	}
+
+}
+
+#text{
+    opacity:0;
+}
+
+.spinnerImg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body {
+    background-color: #BCBFBC;
+}
